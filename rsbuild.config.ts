@@ -11,4 +11,7 @@ export default defineConfig({
   html: {
     template: './index.html',
   },
+  output: {
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/tabbed-windows-in-web/' : '/',
+  },
 });

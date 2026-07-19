@@ -11,9 +11,13 @@ if (!root) {
   throw new Error('Root element was not found.');
 }
 
+const routerBasename = window.location.pathname.startsWith('/tabbed-windows-in-web')
+  ? '/tabbed-windows-in-web'
+  : undefined;
+
 createRoot(root).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename}>
       <WindowManagerProvider>
         <App />
       </WindowManagerProvider>

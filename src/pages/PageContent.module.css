@@ -1,0 +1,85 @@
+.grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.field {
+  color: #475467;
+  display: grid;
+  font-size: 0.9rem;
+  font-weight: 700;
+  gap: 8px;
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+.field input,
+.field select,
+.field textarea {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid #d0d5dd;
+  border-radius: 16px;
+  color: #101828;
+  outline: none;
+  padding: 13px 14px;
+}
+
+.field textarea {
+  min-height: 132px;
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.14);
+}
+
+.card {
+  align-items: center;
+  background: #111827;
+  border-radius: 22px;
+  color: #ffffff;
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  padding: 18px;
+}
+
+.card span {
+  color: #cbd5e1;
+  font-weight: 700;
+}
+
+.card strong {
+  font-size: 2rem;
+}
+
+.card button,
+.toggle {
+  align-items: center;
+  background: #ffffff;
+  border: 0;
+  border-radius: 999px;
+  color: #111827;
+  display: inline-flex;
+  font-weight: 800;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px 14px;
+}
+
+.toggle {
+  border: 1px solid #d0d5dd;
+  justify-self: start;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

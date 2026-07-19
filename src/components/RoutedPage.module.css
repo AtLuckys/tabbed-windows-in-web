@@ -1,0 +1,63 @@
+.page {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.74)),
+    radial-gradient(circle at top right, color-mix(in srgb, var(--accent) 24%, transparent), transparent 26rem);
+  border: 1px solid rgba(16, 24, 40, 0.08);
+  border-radius: 36px;
+  box-shadow: 0 24px 80px rgba(20, 36, 64, 0.12);
+  padding: clamp(22px, 4vw, 42px);
+}
+
+.pageHeader {
+  align-items: flex-start;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.pageHeader h2 {
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: 0.95;
+  margin: 10px 0;
+}
+
+.pageHeader p {
+  color: #667085;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 620px;
+}
+
+.badge {
+  background: color-mix(in srgb, var(--accent) 14%, white);
+  border-radius: 999px;
+  color: color-mix(in srgb, var(--accent) 70%, black);
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 8px 12px;
+  text-transform: uppercase;
+}
+
+.primaryAction {
+  background: var(--accent);
+  border: 0;
+  border-radius: 18px;
+  box-shadow: 0 16px 32px color-mix(in srgb, var(--accent) 28%, transparent);
+  color: #ffffff;
+  flex: 0 0 auto;
+  font-weight: 900;
+  padding: 14px 18px;
+}
+
+@media (max-width: 720px) {
+  .pageHeader {
+    flex-direction: column;
+  }
+
+  .primaryAction {
+    width: 100%;
+  }
+}
